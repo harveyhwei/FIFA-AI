@@ -38,5 +38,9 @@ const RESULTS = {
   37: { homeGoals: 0, awayGoals: 0, status: "final", updatedAt: "2026-06-22T15:30:00+08:00" },
   38: { homeGoals: 1, awayGoals: 3, status: "final", updatedAt: "2026-06-22T15:30:00+08:00" },
   39: { homeGoals: 4, awayGoals: 0, status: "final", updatedAt: "2026-06-22T15:30:00+08:00" },
-  40: { homeGoals: 2, awayGoals: 2, status: "final", updatedAt: "2026-06-22T15:30:00+08:00" }
+  40: { homeGoals: 2, awayGoals: 2, status: "final", updatedAt: "2026-06-22T15:30:00+08:00" },
+  41: { homeGoals: 3, awayGoals: 2, status: "final", updatedAt: "2026-06-23T15:40:00+08:00" },
+  42: { homeGoals: 3, awayGoals: 0, status: "final", updatedAt: "2026-06-23T15:40:00+08:00" },
+  43: { homeGoals: 2, awayGoals: 0, status: "final", updatedAt: "2026-06-23T15:40:00+08:00" },
+  44: { homeGoals: 1, awayGoals: 2, status: "final", updatedAt: "2026-06-23T15:40:00+08:00" }
 };

@@ -3,7 +3,7 @@ const pct = (value) => `${Math.round(value * 100)}%`;
 const round = (value, digits = 1) => Number(value.toFixed(digits));
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 const RESULT_STORAGE_KEY = "world-cup-2026-results";
-const PREVIEW_DATE_OVERRIDE = "2026-06-22";
+const PREVIEW_DATE_OVERRIDE = "2026-06-23";
 
 function initialDate() {
   const dates = [...new Set(FIXTURES.map((fixture) => fixture.date))];

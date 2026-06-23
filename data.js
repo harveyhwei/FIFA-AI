@@ -366,6 +366,26 @@ const BEIJING_TIMES = {
     local: "2026-06-22 20:00 旧金山湾区",
     beijing: "2026-06-23 11:00",
     beijingDate: "2026-06-23"
+  },
+  "2026-06-23|Portugal|Uzbekistan": {
+    local: "2026-06-23 12:00 休斯敦",
+    beijing: "2026-06-24 01:00",
+    beijingDate: "2026-06-24"
+  },
+  "2026-06-23|England|Ghana": {
+    local: "2026-06-23 16:00 波士顿",
+    beijing: "2026-06-24 04:00",
+    beijingDate: "2026-06-24"
+  },
+  "2026-06-23|Panama|Croatia": {
+    local: "2026-06-23 19:00 多伦多",
+    beijing: "2026-06-24 07:00",
+    beijingDate: "2026-06-24"
+  },
+  "2026-06-23|Colombia|DR Congo": {
+    local: "2026-06-23 20:00 瓜达拉哈拉",
+    beijing: "2026-06-24 10:00",
+    beijingDate: "2026-06-24"
   }
 };
 
@@ -849,6 +869,54 @@ const MATCH_INSIGHTS = [
     tempoModifier: 0.02,
     label: "首次参赛韧性战",
     summary: "约旦首轮虽失利但打入队史世界杯首球，情绪价值较强；阿尔及利亚首轮不敌阿根廷后需要提升边路效率和防守集中度。",
+    source: "首轮赛果与今日公开前瞻"
+  },
+  {
+    date: "2026-06-23",
+    home: "Portugal",
+    away: "Uzbekistan",
+    heat: 94,
+    homeMood: 0.04,
+    awayMood: 0.14,
+    tempoModifier: 0.08,
+    label: "葡萄牙调整战",
+    summary: "葡萄牙首轮被刚果民主共和国逼平后外界更关注中前场效率和C罗使用方式；乌兹别克斯坦首轮虽输球但打入队史世界杯首球，情绪反馈偏积极。",
+    source: "首轮赛果、休斯敦赛前报道与公开前瞻"
+  },
+  {
+    date: "2026-06-23",
+    home: "England",
+    away: "Ghana",
+    heat: 96,
+    homeMood: 0.18,
+    awayMood: 0.22,
+    tempoModifier: 0.06,
+    label: "小组头名卡位",
+    summary: "英格兰首轮4-2取胜但防线被提醒需要收紧，加纳首轮绝杀巴拿马后士气上升。公众关注点集中在英格兰控球稳定性和加纳转换速度。",
+    source: "首轮赛果、Tuchel赛前发言与公开前瞻"
+  },
+  {
+    date: "2026-06-23",
+    home: "Panama",
+    away: "Croatia",
+    heat: 76,
+    homeMood: 0.02,
+    awayMood: 0.08,
+    tempoModifier: -0.02,
+    label: "经验修正战",
+    summary: "巴拿马首轮最后阶段失球后需要保持防守纪律；克罗地亚首轮输给英格兰但中场经验仍在，比赛可能更看重控场与耐心。",
+    source: "首轮赛果与今日公开前瞻"
+  },
+  {
+    date: "2026-06-23",
+    home: "Colombia",
+    away: "DR Congo",
+    heat: 88,
+    homeMood: 0.26,
+    awayMood: 0.18,
+    tempoModifier: 0.07,
+    label: "出线主动权战",
+    summary: "哥伦比亚首轮3-1击败乌兹别克斯坦，迪亚斯和边路推进热度较高；刚果民主共和国逼平葡萄牙后防守信心上修，反击质量值得观察。",
     source: "首轮赛果与今日公开前瞻"
   }
 ];
