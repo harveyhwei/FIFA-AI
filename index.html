@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 世界杯预测看板</title>
+    <link rel="stylesheet" href="./style.css?v=bj-0623-1" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">FIFA World Cup 2026 Forecast Lab</p>
+          <h1>2026 世界杯预测看板：胜率与进球率</h1>
+          <p class="subcopy">赛程、实力、阵容、状态、教练、队形、主客旅行与赛程压力综合建模。数据层可持续更新，适合赛前每日生成小红书内容。</p>
+        </div>
+        <div class="signal-card">
+          <span>模型版本</span>
+          <strong>v2.0 I/J组二轮版</strong>
+          <small>基于截至 2026-06-22 已赛比分、赛程与公开前瞻信息；比分使用三档场景表达</small>
+        </div>
+      </section>
+
+      <section class="control-band" aria-label="看板控制">
+        <label>
+          日期
+          <select id="dateFilter"></select>
+        </label>
+        <label>
+          小组
+          <select id="groupFilter"></select>
+        </label>
+        <label>
+          状态/伤病敏感度
+          <input id="formWeight" type="range" min="0" max="2" value="1" step="0.1" />
+        </label>
+        <label>
+          爆冷权重
+          <input id="upsetWeight" type="range" min="0" max="2" value="1" step="0.1" />
+        </label>
+      </section>
+
+      <section class="metric-grid" aria-label="总览指标">
+        <article>
+          <span>今日比赛</span>
+          <strong id="metricMatches">0</strong>
+        </article>
+        <article>
+          <span>平均总进球期望</span>
+          <strong id="metricGoals">0.00</strong>
+        </article>
+        <article>
+          <span>最高胜率</span>
+          <strong id="metricLock">-</strong>
+        </article>
+        <article>
+          <span>最高爆冷风险</span>
+          <strong id="metricUpset">-</strong>
+        </article>
+      </section>
+
+      <section class="review-grid" aria-label="赛后复盘指标">
+        <article>
+          <span>已复盘场次</span>
+          <strong id="reviewCompleted">0</strong>
+        </article>
+        <article>
+          <span>胜平负命中率</span>
+          <strong id="reviewOutcome">-</strong>
+        </article>
+        <article>
+          <span>进球方向命中率</span>
+          <strong id="reviewScoring">-</strong>
+        </article>
+        <article>
+          <span>综合合格率</span>
+          <strong id="reviewQualified">-</strong>
+        </article>
+      </section>
+
+      <section class="layout">
+        <div class="main-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Daily Board</p>
+              <h2>每日比赛预测</h2>
+            </div>
+            <div class="section-actions">
+              <button id="openHistory" class="icon-btn ghost" title="查看过往预测及赛果" type="button">历史预测/赛果</button>
+              <button id="copyXhs" class="icon-btn" title="复制小红书文案" type="button">复制文案</button>
+            </div>
+          </div>
+          <div id="matchList" class="match-list"></div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Xiaohongshu</p>
+              <h2>发布摘要</h2>
+            </div>
+          </div>
+          <pre id="xhsCopy" class="copy-box"></pre>
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Group Forecast</p>
+              <h2>小组出线倾向</h2>
+            </div>
+          </div>
+          <div id="groupBoard" class="group-board"></div>
+        </aside>
+      </section>
+
+      <section class="model-panel">
+        <div>
+          <p class="eyebrow">Model Anatomy</p>
+          <h2>预测维度权重</h2>
+          <p>胜率来自泊松进球分布与综合评分差。综合评分包含排名、阵容、状态、教练、队形、经验、旅行与主场变量。比分展示改为常规/方向/大球三档场景，页面上的滑杆会即时重算。</p>
+        </div>
+        <div class="weight-grid" id="weightGrid"></div>
+      </section>
+    </main>
+
+    <div id="historyModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+      <div class="modal-card">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">Archive Review</p>
+            <h2 id="historyTitle">过往比赛预测及结果</h2>
+          </div>
+          <button id="closeHistory" class="icon-btn ghost" type="button" aria-label="关闭历史预测弹窗">关闭</button>
+        </div>
+        <div id="historySummary" class="history-summary"></div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </div>
+
+    <script src="./data.js?v=bj-0623-1"></script>
+    <script src="./results.js?v=bj-0623-1"></script>
+    <script src="./app.js?v=bj-0623-1"></script>
+  </body>
+</html>
